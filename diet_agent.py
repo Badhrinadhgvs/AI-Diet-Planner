@@ -5,7 +5,7 @@ import re
 import os
 
 # Ensure the API key is properly set
-GROQ_API_KEY = os.getenv("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")  # Ensure this is correctly loaded
+GROQ_API_KEY = os.getenv("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")  # Ensure this is correctly loaded
 
 if not GROQ_API_KEY:
     raise ValueError("Groq API key is missing. Set it in your environment variables.")
