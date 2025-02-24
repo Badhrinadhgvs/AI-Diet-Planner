@@ -27,5 +27,9 @@ def clean_response(response_text):
     return re.sub(r"<think>.*?</think>", "", response_text, flags=re.DOTALL).strip()
 def get_diet_plan(user_input):
     """Function to get diet plan from the AI agent."""
-    response = diet_agent.run(user_input)
-    return clean_response(response.content)
+    try:
+      response = diet_agent.run(user_input)
+      return clean_response(response.content)
+      
+    except Exception:
+      return "Clone and Use with your API key."
