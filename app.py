@@ -26,8 +26,9 @@ if st.sidebar.button("Generate Diet Plan"):
     Generate a personalized diet plan.
     Output Format="The Text should be less that 5 Lines","Provide a Detailed Table format of plan with time stamps"
     """
-    diet_plan = get_diet_plan(user_input)
-    st.subheader("Your Personalized Diet Plan 🍽️")
-    if diet_plan is None:
-      st.write("Clone and use with your api key.")
-    st.write(diet_plan)
+    try:
+      diet_plan = get_diet_plan(user_input)
+      st.subheader("Your Personalized Diet Plan 🍽️")
+      st.write(diet_plan)
+    except Exception:
+      st.write("Clone and Use with your API key.")
