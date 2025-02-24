@@ -28,4 +28,6 @@ if st.sidebar.button("Generate Diet Plan"):
     """
     diet_plan = get_diet_plan(user_input)
     st.subheader("Your Personalized Diet Plan 🍽️")
+    if diet_plan is None:
+      st.write("Clone and use with your api key.")
     st.write(diet_plan)
